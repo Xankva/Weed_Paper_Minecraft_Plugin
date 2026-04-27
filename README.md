@@ -50,6 +50,7 @@ A fun cannabis growing plugin for **Paper 1.21.3+** servers. Grow, harvest, roll
 3. Add to your `server.properties`:
 ```properties
 resource-pack=https://github.com/Xankva/Weed_Paper_Minecraft_Plugin/raw/refs/heads/main/Texture%20Pack/WeedPlugin-ResourcePack-v1.0.0.zip
+resource-pack-sha1=889a0422d4d8f1c2f4b3e5eee18eca28e3620ce4
 resource-pack-prompt=§aWeedPlugin textures — accept for custom visuals!
 ```
 
