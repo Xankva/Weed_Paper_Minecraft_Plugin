@@ -49,7 +49,7 @@ A fun cannabis growing plugin for **Paper 1.21.3+** servers. Grow, harvest, roll
 2. Host it somewhere publicly accessible (GitHub Releases works great)
 3. Add to your `server.properties`:
 ```properties
-resource-pack=https://github.com/Xankva/Weed_Paper_Minecraft_Plugin/releases/download/java/WeedPlugin-ResourcePack-v1.0.0.zip
+resource-pack=https://github.com/Xankva/Weed_Paper_Minecraft_Plugin/raw/refs/heads/main/Texture%20Pack/WeedPlugin-ResourcePack-v1.0.0.zip
 resource-pack-prompt=§aWeedPlugin textures — accept for custom visuals!
 ```
 
