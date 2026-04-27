@@ -1,0 +1,23 @@
+name: WeedPlugin
+version: '${project.version}'
+main: dev.weedplugin.WeedPlugin
+api-version: '1.21'
+description: A fun cannabis growing & harvesting plugin
+author: WeedPlugin
+
+commands:
+  weed:
+    description: Main weed plugin command
+    usage: /weed <give|reload|info>
+    aliases: [cannabis, herb]
+
+permissions:
+  weedplugin.admin:
+    description: Access to admin commands (reload)
+    default: op
+  weedplugin.use:
+    description: Ability to grow and use cannabis
+    default: true
+  weedplugin.give:
+    description: Give weed items to players
+    default: op

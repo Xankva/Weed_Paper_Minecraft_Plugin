@@ -1,0 +1,153 @@
+# ==============================
+#     WeedPlugin Configuration
+#           v1.0.0
+# ==============================
+
+settings:
+  growth-time-seconds: 120
+  allow-bonemeal: true
+  bonemeal-stages: 1
+  disabled-worlds:
+    - world_nether
+    - world_the_end
+  valid-soil:
+    - FARMLAND
+    - DIRT
+    - GRASS_BLOCK
+
+harvest:
+  min-seeds: 1
+  max-seeds: 3
+  min-buds: 1
+  max-buds: 4
+  # Chance (0.0 - 1.0) of getting a premium bud on harvest
+  premium-bud-chance: 0.15
+  auto-replant: false
+
+items:
+  seed:
+    name: "&aWeed Seed"
+    lore:
+      - "&7Plant on soil and wait for it to grow."
+      - "&8Right-click soil to plant."
+  bud:
+    name: "&2Cannabis Bud"
+    lore:
+      - "&7A freshly harvested bud."
+      - "&8Right-click &7with &fPaper &7in inventory to roll."
+  premium-bud:
+    name: "&6✨ Premium Bud"
+    lore:
+      - "&7A rare, high-quality bud."
+      - "&8Right-click &7with &fPaper &7in inventory to roll."
+  joint:
+    name: "&fJoint"
+    lore:
+      - "&7Right-click to smoke."
+      - "&a+ Jump Boost II &7· &b+ Slow Falling &7· &c+ Nausea"
+      - "&a+ Regeneration &7· &a+ Fire Resistance"
+  premium-joint:
+    name: "&6✨ Premium Joint"
+    lore:
+      - "&7Right-click to smoke. Stronger effects."
+      - "&a+ Jump Boost II &7· &b+ Slow Falling II &7· &c+ Nausea"
+      - "&a+ Regeneration II &7· &6+ Absorption &7· &a+ Resistance"
+  edible:
+    name: "&dSpace Brownie"
+    lore:
+      - "&7Right-click to eat. Kicks in after a delay."
+      - "&a+ Jump Boost II &7· &b+ Slow Falling III &7· &c+ Nausea"
+      - "&a+ Regeneration II &7· &a+ Resistance II"
+
+# ─── Joint Effects ────────────────────────────────────────────────────────────
+# Effect names must be lowercase minecraft IDs (e.g. jump_boost, fire_resistance)
+# amplifier: 0 = Level I, 1 = Level II, 2 = Level III
+joint-effects:
+  duration-seconds: 30
+  effects:
+    - type: jump_boost
+      amplifier: 1
+    - type: slowness
+      amplifier: 0
+    - type: nausea
+      amplifier: 0
+    - type: slow_falling
+      amplifier: 0
+    - type: regeneration
+      amplifier: 0
+    - type: fire_resistance
+      amplifier: 0
+
+# ─── Premium Joint Effects ────────────────────────────────────────────────────
+premium-joint-effects:
+  duration-seconds: 60
+  effects:
+    - type: jump_boost
+      amplifier: 1
+    - type: slow_falling
+      amplifier: 1
+    - type: regeneration
+      amplifier: 1
+    - type: absorption
+      amplifier: 1
+    - type: nausea
+      amplifier: 0
+    - type: fire_resistance
+      amplifier: 0
+    - type: resistance
+      amplifier: 0
+
+# ─── Edible Effects ──────────────────────────────────────────────────────────
+edible-effects:
+  delay-seconds: 10
+  duration-seconds: 120
+  effects:
+    - type: jump_boost
+      amplifier: 1
+    - type: slow_falling
+      amplifier: 2
+    - type: hunger
+      amplifier: 1
+    - type: nausea
+      amplifier: 0
+    - type: regeneration
+      amplifier: 2
+    - type: fire_resistance
+      amplifier: 0
+    - type: resistance
+      amplifier: 1
+
+# ─── Smoking Animation ───────────────────────────────────────────────────────
+smoking-animation:
+  puff-count: 6
+  puff-interval-ticks: 7
+
+# ─── Messages ────────────────────────────────────────────────────────────────
+messages:
+  prefix: "&8[&aWeed&8] "
+  planted: "&aYou planted a cannabis seed! 🌱"
+  too-early: "&cThis plant isn't ready yet. Be patient! 🌿"
+  harvested: "&aHarvested! Got &e{buds} &abud(s) and &e{seeds} &aseed(s)."
+  premium-harvested: "&6✨ Premium harvest! Got &e{buds} &6premium bud(s) and &e{seeds} &aseed(s)."
+  smoked-joint: "&fYou smoke the joint... &7*cough cough* 💨"
+  smoked-premium: "&6You smoke the premium joint... &7*massive cough* 💨✨"
+  ate-edible: "&dYou eat the space brownie... &7it'll kick in soon. 🍫"
+  edible-kicked-in: "&5Woah... &dthe brownie just kicked in! 🌀"
+  no-permission: "&cYou don't have permission to do that!"
+  reload-success: "&aConfig reloaded successfully!"
+  rolling-joint: "&fYou roll a joint. 🚬"
+  rolling-premium: "&6You roll a premium joint. ✨🚬"
+  need-paper: "&cYou need &fPaper &c(x1) in your inventory to roll a joint!"
+
+# ─── Particles ───────────────────────────────────────────────────────────────
+particles:
+  enabled: true
+  ready-particle: HAPPY_VILLAGER
+
+# ─── Sounds ──────────────────────────────────────────────────────────────────
+sounds:
+  enabled: true
+  plant: BLOCK_CROP_BREAK
+  harvest: ENTITY_EXPERIENCE_ORB_PICKUP
+  smoke: ENTITY_CAT_PURR
+  eat: ENTITY_PLAYER_BURP
